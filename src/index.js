@@ -3,6 +3,7 @@ import $ from "jquery";
 import fullCalendar from "fullcalendar";
 import moment from 'moment';
 import FullcalendarObjectMapper from './fullcalendarObjectMapper';
+import debounce from 'debounce';
 
 export default class FullCalendar extends React.Component{
 	constructor(){
@@ -12,6 +13,7 @@ export default class FullCalendar extends React.Component{
 		this.root = null;
 		this.instance = null;
 		this.date = new Date();
+		this.eventString = '';
 	}
 
 	componentDidMount(){
@@ -20,9 +22,14 @@ export default class FullCalendar extends React.Component{
 	}
 
   	componentWillReceiveProps(nextProps){
-  		this.jq(`#${this.root}`).fullCalendar('destroy');
-  		const objectMapperSettings = this.fullcalendarObjectMapper.getSettings(nextProps);
-    	this.instance = this.jq(`#${this.root}`).fullCalendar(objectMapperSettings);
+		debounce(() => {
+            if (nextProps.events && this.eventSString !== JSON.stringify(nextProps.events)) {
+                this.eventString = JSON.stringify(nextProps.events);
+  		        this.jq(`#${this.root}`).fullCalendar('destroy');
+  		        const objectMapperSettings = this.fullcalendarObjectMapper.getSettings(nextProps);
+        	    this.instance = this.jq(`#${this.root}`).fullCalendar(objectMapperSettings);
+            }
+		}, 200)
   	}
 
 	render(){

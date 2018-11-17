@@ -10,17 +10,18 @@
     "prepublish": "npm run build"
   },
   "keywords": [
-      "react-component",
-      "react",
-      "calendar",
-      "events",
-      "fullcalendar",
-      "react-fullcalendar"
+    "react-component",
+    "react",
+    "calendar",
+    "events",
+    "fullcalendar",
+    "react-fullcalendar"
   ],
   "author": "Sanjeev Pradhan <csesanjeev07@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/sanjeev07/fullcalendar-reactWrapper",
   "dependencies": {
+    "debounce": "^1.2.0",
     "fullcalendar": "^3.4.0",
     "jquery": "^3.2.1",
     "moment": "^2.18.1",
