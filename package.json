@@ -1,6 +1,6 @@
 {
   "name": "fullcalendar-reactwrapper-cdl",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "A React Calendar with events. Originally fullcalenda-reactwrapper, but with minor fixes.",
   "main": "lib/index.js",
   "scripts": {
@@ -22,7 +22,7 @@
   "repository": "https://github.com/herpiko/fullcalendar-reactWrapper",
   "dependencies": {
     "debounce": "^1.2.0",
-    "fullcalendar": "^3.4.0",
+    "fullcalendar": "^3.10.0",
     "jquery": "^3.2.1",
     "moment": "^2.18.1",
     "react": "^15.5.4",
