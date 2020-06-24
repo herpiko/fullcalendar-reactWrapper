@@ -22,7 +22,7 @@
   "repository": "https://github.com/herpiko/fullcalendar-reactWrapper",
   "dependencies": {
     "debounce": "^1.2.0",
-    "fullcalendar": "^3.10.0",
+    "fullcalendar": "^5.0.1",
     "jquery": "^3.2.1",
     "moment": "^2.18.1",
     "react": "^15.5.4",
